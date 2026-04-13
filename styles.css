@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&family=Inter:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #050810; 
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+/* --- الهيدر --- */
+.nexus-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: transparent;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nexus-logo {
+    width: 50px;
+    height: auto;
+}
+
+.brand-name {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.nexus-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    align-items: center;
+}
+
+.nexus-nav a {
+    color: #a0aec0;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nexus-nav a:hover {
+    color: #00f0ff;
+    font-size: 1.2rem;
+
+}
+
+.btn-access {
+    background-color: #00f0ff;
+    color: #000 !important;
+    padding: 10px 10px;
+    font-weight: 700;
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
+    transition: 0.3s;
+
+}
+
+.btn-access:hover {
+    background-color: #a855f7;
+    color: white !important;
+
+}
+
+.lang-btn {
+    background: transparent;
+    color: #a0aec0;
+    border: 1px solid #a0aec0;
+    padding: 5px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.lang-btn:hover {
+    border-color: #00f0ff;
+    color: #00f0ff;
+}
+
+/* --- الوجهة الرئيسية (Hero Section) --- */
+.cyber-hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 5%;
+    gap: 40px;
+    min-height: 70vh;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.badge-purple {
+    display: inline-block;
+    border: 1px solid #6b21a8;
+    color: #d8b4fe;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    background: rgba(107, 33, 168, 0.2);
+}
+
+.main-title {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 0 0 20px 0;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #00f0ff, #3b82f6, #a855f7);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 4.8rem;
+}
+
+.hero-desc {
+    color: #94a3b8;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 20px;
+}
+
+.btn-cyan-solid {
+    background-color: #00f0ff;
+    color: #000;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 4px;
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+    transition: 0.3s;
+}
+
+.btn-cyan-solid:hover {
+    box-shadow: 0 0 25px rgba(0, 240, 255, 0.6);
+}
+
+.btn-cyan-outline {
+    background-color: transparent;
+    border: 1px solid #00f0ff;
+    color: #00f0ff;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.btn-cyan-outline:hover {
+    background-color: rgba(0, 240, 255, 0.1);
+}
+
+/* --- اللوحة الرسومية --- */
+.hero-visual {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.visual-panel {
+    position: relative;
+    width: 100%;
+    max-width: 550px;
+    height: 350px;
+    background: rgba(10, 15, 25, 0.8);
+    border: 1px solid #1e293b;
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.status-badge {
+    position: absolute;
+    border: 1px solid #008b8b;
+    color: #00f0ff;
+    padding: 5px 10px;
+    font-size: 0.7rem;
+    background: rgba(0, 240, 255, 0.05);
+}
+
+.top-left { top: 20px; left: 20px; border-radius: 4px; }
+.bottom-right { bottom: 20px; right: 20px; border-radius: 4px; }
+
+/* نقاط الخريطة */
+.map-dots {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.dot {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: #00f0ff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #00f0ff;
+}
+
+.dot-label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #94a3b8;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+/* التجاوب مع شاشات الجوال */
+@media (max-width: 768px) {
+    .cyber-hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    .hero-actions {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .hero-visual {
+        justify-content: center;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .main-title {
+        font-size: 3.5rem;
+    }
+
+    .nexus-nav ul {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .nexus-header {
+        flex-direction: column;
+    }
+}
+
+
+/* From Uiverse.io by stlyash */ 
+.redes {
+  width: 80px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.redes a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  transition: all 0.2s ease-in-out;
+}
+
+.redes a svg {
+  width: 30px;
+  fill: #ffffff;
+}
+
+.redes .discord {
+  background-color: rgb(0, 60, 255);
+  border-radius: 0 0 10px 0;
+}
+
+.redes .instagram {
+  background: linear-gradient(45deg, #833ab4, #fd1d1d, #f56040);
+  border-radius: 0 10px 0 0;
+}
+
+.redes .github {
+  background-color: #006aff;
+  
+}
+
+.redes .twitter {
+  background-color: #000000;
+}
+
+.redes .facebook {
+  background-color: #006aff;
+}
+
+.redes a:hover {
+  width: 130%;
+  border-radius: 0 10px 10px 0;
+}
+
+
