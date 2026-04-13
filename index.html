@@ -1,230 +1,34 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
- 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Nexus Arabia - BAT</title>
-    <script src="script.js"></script>
-
-
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
-<style>
-    /* تنسيق حاوية الخريطة */
-    #map { 
-        height: 500px; 
-        width: 100%; 
-        border-radius: 15px;
-        border: 2px solid #00f0ff;
-        box-shadow: 0 0 20px rgba(0, 240, 255, 0.2);
-    }
-    /* تنسيق الكرت الذي يظهر عند الضغط (مثل الصورة) */
-    .map-info-card {
-        background: white;
-        color: black;
-        padding: 15px;
-        border-radius: 10px;
-        font-family: 'Segoe UI', Tahoma, sans-serif;
-        min-width: 200px;
-    }
-</style>
-
-
+    <title>Your Website Title</title>
+    <script src="your-script.js" defer></script>
 </head>
 <body>
+    <header>
+        <button id="hamburger-menu" aria-label="Open mobile navigation" aria-expanded="false">☰</button>
+    </header>
 
-  <header class="nexus-header">
-    <div class="logo-area">
-        <img src="assets/img/logo.jpg.png" alt="BAT Logo" class="nexus-logo"/>
-        <span class="brand-name" data-en="BAT" data-ar="منصة بات">BAT</span>
-    </div>
-    
-    <nav class="nexus-nav">
+    <nav>
         <ul>
-            <li><a href="#contact" data-en="Contact us " data-ar="تواصل معنا">Contact us</a></li>
-            <li><a href="#services" data-en="SERVICES" data-ar="الخدمات">SERVICES</a></li>
-            <li><a href="#contact" class="btn-access" data-en="ACCESS PORTAL" data-ar="بوابة الدخول">ACCESS PORTAL</a></li>
-            <li><button id="lang-scaler" onclick="toggleLanguage()" class="lang-btn" data-en="English" data-ar="عربي">English</button></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
         </ul>
     </nav>
-  </header>
 
-  <section class="cyber-hero">
-    <div class="hero-content">
-        <div class="badge-purple" data-en="BAT PLATFORM FOR SMART ENERGY SOLUTIONS" data-ar="منصة بات لحلول الطاقة الذكية">BAT PLATFORM FOR SMART ENERGY SOLUTIONS</div>
-        
-        <h1 class="main-title">
-            <span data-en="POWER " data-ar="الطاقة…">POWER </span> <br>
-            <span class="gradient-text" data-en="WHEN YOU NEED IT" data-ar="في اللحظة التي تحتاجها">WHEN YOU NEED IT </span>
-        </h1>
-        
-        <p class="hero-desc" data-en="Discover the power of instant energy with BAT — a single-use power bank that delivers fast and safe charging wherever you are. Lightweight, practical, and ready to support you during travel and emergencies without the wait. 🔋⚡ ." data-ar="اكتشف قوة الطاقة الفورية مع BAT — باور بانك أحادي الاستخدام يمنحك شحنًا سريعًا وآمنًا أينما كنت. خفيف، عملي، وجاهز لدعمك في السفر والطوارئ دون انتظار. 🔋⚡"> Discover the power of instant energy with BAT — a single-use power bank that delivers fast and safe charging wherever you are. Lightweight, practical, and ready to support you during travel and emergencies without the wait. 🔋⚡ </p>
-        
-        <div class="hero-actions">
-            <a href="#services" class="btn-cyan-solid" data-en="Start Exploring" data-ar="ابدأ الاستكشاف">Start Exploring</a>
-            <a href="#contact" class="btn-cyan-outline" data-en="View Documentation" data-ar="عرض الوثائق">View Documentation</a>
-        </div>
-    </div>
+    <main>
+        <section>
+            <h1>Welcome to Our Website</h1>
+            <p>Some content goes here.</p>
+        </section>
+    </main>
 
-    <div class="hero-visual">
-        <div class="visual-panel">
-            <div class="status-badge top-left" data-en="SYSTEM STATUS: ONLINE" data-ar="حالة النظام: متصل">SYSTEM STATUS: ONLINE</div>
-            
-          <div id="map"></div>
-
-            <div class="status-badge bottom-right" data-en="REGION: MENA-01" data-ar="المنطقة: الشرق الأوسط-01">REGION: MENA-01</div>
-        </div>
-    </div>
-  </section>
-
-   <section id="services" style="padding: 60px 20px; background: #050810;">
-    <div style="text-align: center; margin-bottom: 40px;">
-        <h2 data-ar="تواصل معنا" data-en="Contact us" style="color: #00f0ff;">Contact us</h2>
-    
-    </div>
-
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; max-width: 1100px; margin: 0 auto;">
-      
-        <div style="background: rgba(10, 15, 25, 0.8); padding: 30px; border-radius: 15px; text-align: center; border-bottom: 4px solid #a855f7; border-top: 1px solid #1e293b;">
-            <div style="font-size: 40px; margin-bottom: 15px;">📧</div>
-            <h3 data-ar="سجل اهتمامك الآن" data-en="Register your interest now" style="color: white;">Register your interest now</h3>
-            <p data-ar="سجل اهتمامك للتواصل معنا." data-en="Register your interest to contact us." style="color: #94a3b8; margin-top: 10px;">Register your interest to contact us.</p>
-            <button style="background: linear-gradient(45deg, #00f0ff, #a855f7); color: black; border: none; padding: 12px 24px; border-radius: 8px; font-weight: 600; cursor: pointer; margin-top: 15px;" onclick="alert('Coming soon!')">Get Started</button>
-        </div>
-
-    </div>
-</section>
-
-<footer style="padding: 40px 5%; background: rgba(5, 8, 16, 0.8); text-align: center; border-top: 1px solid #1e293b;">
-<div class="redes">
-
-  <a class="instagram" href="https://www.instagram.com/bat_energy" target="_blank" rel="noopener">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="#ffffff"
-      viewBox="0,0,550,550"
-      width="25px"
-      height="25px"
-      fill-rule="nonzero"
-    >
-      <path
-        d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
-      ></path>
-    </svg>
-  </a>
-
-  <a class="twitter" href="https://twitter.com/bat_energy" target="_blank" rel="noopener">
-    <svg
-      fill="white"
-      class="svgIcon"
-      xmlns="http://www.w3.org/2000/svg"
-      width="25px"
-      height="25px"
-      viewBox="0 0 564 564"
-    >
-      <path
-        d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"
-      ></path>
-    </svg>
-  </a>
-
-  <a class="facebook" href="https://www.facebook.com/bat_energy" target="_blank" rel="noopener">
-    <svg
-      class="icon icons8-Facebook-Filled"
-      
-      viewBox="0 0 50 50"
-      height="25px"
-      width="25px"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M40,0H10C4.486,0,0,4.486,0,10v30c0,5.514,4.486,10,10,10h30c5.514,0,10-4.486,10-10V10C50,4.486,45.514,0,40,0z M39,17h-3 c-2.145,0-3,0.504-3,2v3h6l-1,6h-5v20h-7V28h-3v-6h3v-3c0-4.677,1.581-8,7-8c2.902,0,6,1,6,1V17z"
-      ></path>
-    </svg>
-  </a>
-
-  <a class="github" href="https://github.com">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 30 30"
-      width="25px"
-      height="25px"
-      class="github"
-    >
-      <path
-        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
-      ></path>
-    </svg>
-  </a>
-
-  <a class="discord" href="https://discord.gg/bat" target="_blank" rel="noopener"
-    ><svg
-      height="25px"
-      width="25px"
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-      class="discord"
-    >
-      <path
-        d="M20.317 4.371 13.043 4.373a8.19 8.19 0 0 0-5.12.872 3.475 3.475 0 0 0-.52.229l-.98.49a7.67 7.67 0 0 0-3.748 7.25c-.232 1.65-.276 3.351-.25 5.125-.938 1.316-1.514 2.865-1.561 4.546-.05 1.814.188 3.67.65 5.538l-.218 1.987c-.068.65.036 1.32.273 1.966.29.79.913 1.47 1.696 1.789a8.202 8.202 0 0 0 5.488 1.012l1.81-.337A9.723 9.723 0 0 0 11.718 22c1.582.13 3.189.13 4.812 0 1.518-.13 3.029-.53 4.472-1.185l1.927.435a8.07 8.07 0 0 0 5.295-.962 3.43 3.43 0 0 0 1.591-1.84c.402-.906.536-1.95.416-3.013l.003-.75c.528-2.34.394-4.79-.288-7.176-.782-2.718-2.538-5.07-4.876-6.551A10.18 10.18 0 0 0 20.317 4.37Zm-5.845 14.118a1.647 1.647 0 1 1 0-3.294 1.647 1.647 0 1 1 0 3.294Zm5.658 0a1.647 1.647 0 1 1 0-3.294 1.647 1.647 0 1 1 0 3.294Z"
-      ></path>
-    </svg>
-  </a>
-</div>
-    <p style="color: #94a3b8; font-size: 0.9rem;">© 2024 BAT Platform. All rights reserved.</p>
-</footer>
-
-   
-<div class="redes">
-
-  <a class="instagram" href="https://www.instagram.com/bat_energy" target="_blank" rel="noopener">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="#ffffff"
-      viewBox="0,0,550,550"
-      width="25px"
-      height="25px"
-      fill-rule="nonzero"
-    >
-      <path
-        d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
-      ></path>
-    </svg>
-  </a>
-
-  <a class="twitter" href="https://twitter.com/bat_energy" target="_blank" rel="noopener">
-    <svg
-      fill="white"
-      class="svgIcon"
-      xmlns="http://www.w3.org/2000/svg"
-      width="25px"
-      height="25px"
-      viewBox="0 0 564 564"
-    >
-      <path
-        d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"
-      ></path>
-    </svg>
-  </a>
-
-  <a class="facebook" href="https://www.facebook.com/bat_energy" target="_blank" rel="noopener">
-    <svg
-      class="icon icons8-Facebook-Filled"
-      
-      viewBox="0 0 50 50"
-      height="25px"
-      width="25px"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M40,0H10C4.486,0,0,4.486,0,10v30c0,5.514,4.486,10,10,10h30c5.514,0,10-4.486,10-10V10C50,4.486,45.514,0,40,0z M39,17h-3 c-2.145,0-3,0.504-3,2v3h6l-1,6h-5v20h-7V28h-3v-6h3v-3c0-4.677,1.581-8,7-8c2.902,0,6,1,6,1V17z"
-      ></path>
-    </svg>
-  </a>
-
-
+    <footer>
+        <p>&copy; 2026 Your Company. All rights reserved.</p>
+    </footer>
+</body>
+</html>
